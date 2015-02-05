@@ -1,0 +1,14 @@
+{
+  "name": "tic-tac-toe",
+  "version": "0.0.0",
+  "description": "Tic Tac Toe",
+  "main": "game.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Annabel",
+  "license": "The MIT License (MIT)",
+  "dependencies": {
+    "mocha": "~2.1.0"
+  }
+}

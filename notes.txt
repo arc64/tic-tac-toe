@@ -1,0 +1,8 @@
+
+Test:
+
+mocha
+
+Run:
+
+node game
