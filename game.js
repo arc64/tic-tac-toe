@@ -18,18 +18,19 @@
 var readline = require('readline');
 
 var print = require('./print');
-var board = require('./board');
+var newBoard = require('./board');
 
 
 var game = function(){
 
     // Who starts? default to X.
     var turn = "X";
-
+    var board = newBoard();
 
     function play(){
+
         // Show board to player
-        print.board(board.board, board.wdth);
+        print.board(board.board(), board.wdth());
 
         // Collect input Node readline http://nodejs.org/api/readline.html
         var rl = readline.createInterface({
@@ -52,7 +53,7 @@ var game = function(){
                 // play again
                 play();
             } else {
-                print.board(board.board, board.wdth);
+                print.board(board.board(), board.wdth());
                 process.exit(1);
             }
 

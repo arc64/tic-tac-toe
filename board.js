@@ -1,15 +1,11 @@
+var print = require('./print');
+
 var board = function(){
 
     // Going with numbered input instead of coordinates
     var board = ["0","1","2","3","4","5","6","7","8"];
 
-    // test boards, as there are no written tests
-    //var board = ["X","X","2","O","O","5","6","7","8"];
-    //var board = ["X","X","O","O","O","5","6","7","8"];
-    //var board = ["X","X","O","O","O","X","X","O","8"];
-
     var width = 3;
-
 
     function update(choice, value) {
         // update board
@@ -76,10 +72,23 @@ var board = function(){
             score[v] = score[v] !== undefined ? score[v] + 1 : 0;
             x += dx;
             y += dy;
+
             if(score[v] >= width -1) {
                 return v;
             }
         }
+    }
+
+    function getBoard() {
+        return board;
+    }
+
+    function getWidth() {
+        return width;
+    }
+
+    function testBoard(newBoard){
+        board = newBoard;
     }
 
     return {
@@ -87,10 +96,11 @@ var board = function(){
         canStillMove:canStillMove,
         hasWinner:hasWinner,
         checkSeries:checkSeries,
-        board:board,
-        wdth:width
+        setBoard: testBoard,
+        board: getBoard,
+        wdth: getWidth,
     }
 
-}();
+};
 
 module.exports = board;

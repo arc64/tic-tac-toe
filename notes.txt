@@ -1,8 +1,7 @@
 
-Test:
+Test: mocha
 
-mocha
+Run: node game
 
-Run:
+game-gist.js was submitted.
 
-node game
