@@ -1,20 +1,3 @@
-/**
-    Tic Tac Toe / Naughts and Crosses
-    To run: node game.js
-
-    Command line input expects numbered input indicating the square to play
-    Two player game, X is always first
-
-    // Player can win
-    // Player cannot select a square that is taken
-    // Player can only select by number
-    // The game ends when won or when there are no more squares
-**/
-
- // objects - good objects are responsible for as little state and functionality as is practical
- // add unit tests
-
-
 var readline = require('readline');
 
 var print = require('./print');

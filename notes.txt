@@ -1,7 +1,0 @@
-
-Test: mocha
-
-Run: node game
-
-game-gist.js was submitted.
-
